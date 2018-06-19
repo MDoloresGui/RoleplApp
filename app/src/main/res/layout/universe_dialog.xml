@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5sp"
+    android:background="#ffd5d5">
+
+    <EditText
+        android:id="@+id/etName_dialog"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Nombre del universo"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <LinearLayout
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btOK_dialog"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3sp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="OK"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btCancel_dialog"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3sp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="Cancelar"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RoleSearchActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:background="@color/colorPrimaryDark"
+        android:minHeight="150sp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/ic_action_search" />
+
+        <EditText
+            android:id="@+id/etSearch_roleSearch"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="5sp"
+            android:layout_weight="8"
+            android:backgroundTint="#FFFFFF"
+            android:hint="Búsqueda..."
+            android:textColor="#FFFFFF"
+            android:textColorHint="#dcdcdc" />
+
+        <ImageButton
+            android:id="@+id/ibSend_roleSearch"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:src="@drawable/ic_action_send" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvRoles_roleSearch"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_marginHorizontal="5sp"
+        android:layout_weight="10"></ListView>
+
+</LinearLayout>

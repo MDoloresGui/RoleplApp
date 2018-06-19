@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CharacterDetailedActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="2"
+        android:padding="10sp"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageView
+            android:id="@+id/ivAvatar_characterDetailed"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_face" />
+
+        <TextView
+            android:layout_marginStart="8sp"
+            android:id="@+id/tvName_characterDetailed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="CHARACTER NAME"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="@color/colorPrimaryDark"></LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10sp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Biografía"
+                android:textStyle="bold"
+                android:layout_marginBottom="10sp"
+                android:textSize="18sp"/>
+            <TextView
+                android:id="@+id/tvBio_characterDetailed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bio"
+                android:layout_marginBottom="20sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ficha"
+                android:textStyle="bold"
+                android:layout_marginBottom="10sp"
+                android:textSize="18sp"/>
+            <TextView
+                android:id="@+id/tvCard_characterDetailed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ficha"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

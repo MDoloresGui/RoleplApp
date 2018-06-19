@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center">
+        <EditText
+            android:id="@+id/etName_signup"
+            android:layout_marginTop="10sp"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:hint="Nombre de usuario"
+            android:inputType="text"/>
+        <EditText
+            android:id="@+id/etEmail_signup"
+            android:layout_marginTop="10sp"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"/>
+        <EditText
+            android:id="@+id/etPassword_signup"
+            android:layout_marginTop="10sp"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:inputType="textPassword"/>
+        <EditText
+            android:id="@+id/etConfirmPassword_signup"
+            android:layout_marginTop="10sp"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:hint="Confirmar contraseña"
+            android:inputType="textPassword"/>
+        <Button
+            android:id="@+id/btRegister_signup"
+            android:layout_marginTop="30sp"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:textColor="#FFFFFF"
+            android:text="REGISTRARSE"/>
+    </LinearLayout>
+
+</LinearLayout>

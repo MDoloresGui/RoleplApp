@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/role_search_opt"
+        android:title="Búsqueda de roles"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/my_roles_opt"
+        android:title="Mis roles activos"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/create_role_opt"
+        android:title="Crear rol"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/main_menu_opt"
+        android:title="Menú principal"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/close_opt"
+        android:title="Cerrar"
+        app:showAsAction="never"/>
+</menu>
