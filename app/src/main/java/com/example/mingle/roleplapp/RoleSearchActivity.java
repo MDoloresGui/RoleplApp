@@ -143,11 +143,6 @@ public class RoleSearchActivity extends AppCompatActivity {
                 i.putExtra("id", id);
                 startActivity(i);
                 break;
-            case R.id.main_menu_opt:
-                i = new Intent(RoleSearchActivity.this, MainMenuActivity.class);
-                i.putExtra("id", id);
-                startActivity(i);
-                break;
         }
 
         return super.onOptionsItemSelected(item);

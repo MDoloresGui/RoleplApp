@@ -131,11 +131,6 @@ public class MyRoleLinesActivity extends AppCompatActivity {
                 i.putExtra("id", id);
                 startActivity(i);
                 break;
-            case R.id.main_menu_opt:
-                i = new Intent(MyRoleLinesActivity.this, MainMenuActivity.class);
-                i.putExtra("id", id);
-                startActivity(i);
-                break;
         }
 
         return super.onOptionsItemSelected(item);

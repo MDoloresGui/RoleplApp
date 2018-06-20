@@ -13,8 +13,4 @@
         android:id="@+id/create_role_opt"
         android:title="Crear rol"
         app:showAsAction="never"/>
-    <item
-        android:id="@+id/main_menu_opt"
-        android:title="Menú principal"
-        app:showAsAction="never"/>
 </menu>

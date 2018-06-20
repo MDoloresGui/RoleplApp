@@ -294,6 +294,11 @@ public class CreateRolLineActivity extends AppCompatActivity {
                     }
                     spMaster.setAdapter(new ArrayAdapter<>(CreateRolLineActivity.this, R.layout.support_simple_spinner_dropdown_item, charactersToShow));
                     spMaster.setSelection(0);
+
+                    if (charactersBack.size() == 0) {
+                        Toast.makeText(CreateRolLineActivity.this, "Tienes que tener creado un personaje al menos para hacer esto", Toast.LENGTH_LONG).show();
+                        finish();
+                    }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

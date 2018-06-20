@@ -46,7 +46,6 @@ public class MainMenuActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_character_detailed, menu);
         getSupportActionBar().setTitle("Menú principal");
-        menu.findItem(R.id.main_menu_opt).setVisible(false);
         return true;
     }
 
@@ -66,11 +65,6 @@ public class MainMenuActivity extends AppCompatActivity {
                 break;
             case R.id.my_roles_opt:
                 i = new Intent(MainMenuActivity.this, MyRoleLinesActivity.class);
-                i.putExtra("id", actid);
-                startActivity(i);
-                break;
-            case R.id.main_menu_opt:
-                i = new Intent(MainMenuActivity.this, MainMenuActivity.class);
                 i.putExtra("id", actid);
                 startActivity(i);
                 break;
