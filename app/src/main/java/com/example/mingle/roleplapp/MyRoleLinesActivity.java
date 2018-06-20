@@ -1,9 +1,12 @@
 package com.example.mingle.roleplapp;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import org.json.JSONArray;
@@ -36,6 +39,16 @@ public class MyRoleLinesActivity extends AppCompatActivity {
         lv.setAdapter(adapter);
 
         loadRoleLines();
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(MyRoleLinesActivity.this, RoleLineVisualizerActivity.class);
+                intent.putExtra("roleline", roles.get(i));
+                intent.putExtra("id", id);
+                startActivity(intent);
+            }
+        });
     }
 
     private void loadRoleLines() {

@@ -1,6 +1,8 @@
 package com.example.mingle.roleplapp;
 
-public class RoleLine {
+import java.io.Serializable;
+
+public class RoleLine implements Serializable {
     private int id;
     private String title;
     private String creationDate;

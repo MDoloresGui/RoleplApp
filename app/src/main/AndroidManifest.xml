@@ -28,7 +28,8 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".RoleSearchActivity" />
         <activity android:name=".CreateRolLineActivity" />
-        <activity android:name=".MyRoleLinesActivity"></activity>
+        <activity android:name=".MyRoleLinesActivity" />
+        <activity android:name=".RoleLineVisualizerActivity"></activity>
     </application>
 
 </manifest>
