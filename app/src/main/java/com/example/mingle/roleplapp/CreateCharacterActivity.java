@@ -69,6 +69,7 @@ public class CreateCharacterActivity extends AppCompatActivity implements Custom
 
         Bundle bundle = getIntent().getExtras();
         id = bundle.getInt("id");
+        getSupportActionBar().setTitle("Crear personaje");
 
         setContentView(R.layout.activity_create_character);
         etBio = findViewById(R.id.etBiography_createCharacter);
@@ -188,10 +189,7 @@ public class CreateCharacterActivity extends AppCompatActivity implements Custom
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }
-
-
                 }
-
             }
         });
 

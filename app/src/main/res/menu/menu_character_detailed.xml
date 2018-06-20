@@ -17,8 +17,4 @@
         android:id="@+id/main_menu_opt"
         android:title="Menú principal"
         app:showAsAction="never"/>
-    <item
-        android:id="@+id/close_opt"
-        android:title="Cerrar"
-        app:showAsAction="never"/>
 </menu>

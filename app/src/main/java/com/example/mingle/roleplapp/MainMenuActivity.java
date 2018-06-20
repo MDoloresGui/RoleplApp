@@ -69,6 +69,11 @@ public class MainMenuActivity extends AppCompatActivity {
                 i.putExtra("id", actid);
                 startActivity(i);
                 break;
+            case R.id.main_menu_opt:
+                i = new Intent(MainMenuActivity.this, MainMenuActivity.class);
+                i.putExtra("id", actid);
+                startActivity(i);
+                break;
         }
 
         return super.onOptionsItemSelected(item);

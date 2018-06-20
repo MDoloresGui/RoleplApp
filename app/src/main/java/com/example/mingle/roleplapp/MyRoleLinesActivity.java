@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -109,5 +110,34 @@ public class MyRoleLinesActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Mis roles activos");
         menu.findItem(R.id.my_roles_opt).setVisible(false);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent i;
+        switch (item.getItemId()) {
+            case R.id.role_search_opt:
+                i = new Intent(MyRoleLinesActivity.this, RoleSearchActivity.class);
+                i.putExtra("id", id);
+                startActivity(i);
+                break;
+            case R.id.create_role_opt:
+                i = new Intent(MyRoleLinesActivity.this, CreateRolLineActivity.class);
+                i.putExtra("id", id);
+                startActivity(i);
+                break;
+            case R.id.my_roles_opt:
+                i = new Intent(MyRoleLinesActivity.this, MyRoleLinesActivity.class);
+                i.putExtra("id", id);
+                startActivity(i);
+                break;
+            case R.id.main_menu_opt:
+                i = new Intent(MyRoleLinesActivity.this, MainMenuActivity.class);
+                i.putExtra("id", id);
+                startActivity(i);
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

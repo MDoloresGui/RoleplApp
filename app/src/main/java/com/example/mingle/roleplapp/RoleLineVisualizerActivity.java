@@ -23,7 +23,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class RoleLineVisualizerActivity extends AppCompatActivity {
+public class RoleLineVisualizerActivity extends AppCompatActivity implements PostDialog.OnDialogPosted {
 
     RoleLine roleLine;
     int userId;
@@ -64,6 +64,14 @@ public class RoleLineVisualizerActivity extends AppCompatActivity {
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
 
+            }
+        });
+
+        bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PostDialog dialog = new PostDialog(RoleLineVisualizerActivity.this,
+                        RoleLineVisualizerActivity.this, roleLine.getId(), userCharacters.get(spChar.getSelectedItemPosition()).getId());
             }
         });
 
@@ -255,5 +263,11 @@ public class RoleLineVisualizerActivity extends AppCompatActivity {
         tvUniverse = findViewById(R.id.tvUniverse_visualizer);
         lv = findViewById(R.id.lvPosts_visualizer);
         bt = findViewById(R.id.btAnswer_visualizer);
+    }
+
+    @Override
+    public void dialogPosted() {
+        startActivity(getIntent());
+        finish();
     }
 }

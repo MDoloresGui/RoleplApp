@@ -54,6 +54,8 @@ public class CreateRolLineActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         assert extras != null;
         id = extras.getInt("id");
+
+        getSupportActionBar().setTitle("Crear línea de rol");
         initializeComponents();
         populateUniverses();
         populateCharacters();
@@ -340,14 +342,6 @@ public class CreateRolLineActivity extends AppCompatActivity {
                 spUni.setSelection(0);
             }
         }.execute();
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_character_detailed, menu);
-        getSupportActionBar().setTitle("Crear línea de rol");
-        menu.findItem(R.id.create_role_opt).setVisible(false);
-        return true;
     }
 
     private void initializeComponents() {

@@ -1,11 +1,13 @@
 package com.example.mingle.roleplapp;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -96,6 +98,16 @@ public class RoleSearchActivity extends AppCompatActivity {
                 }.execute();
             }
         });
+
+        lvResults.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(RoleSearchActivity.this, RoleLineVisualizerActivity.class);
+                intent.putExtra("roleline", roleLines.get(i));
+                intent.putExtra("id", id);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initializeComponents() {
@@ -110,5 +122,34 @@ public class RoleSearchActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Búsqueda de roles");
         menu.findItem(R.id.role_search_opt).setVisible(false);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent i;
+        switch (item.getItemId()) {
+            case R.id.role_search_opt:
+                i = new Intent(RoleSearchActivity.this, RoleSearchActivity.class);
+                i.putExtra("id", id);
+                startActivity(i);
+                break;
+            case R.id.create_role_opt:
+                i = new Intent(RoleSearchActivity.this, CreateRolLineActivity.class);
+                i.putExtra("id", id);
+                startActivity(i);
+                break;
+            case R.id.my_roles_opt:
+                i = new Intent(RoleSearchActivity.this, MyRoleLinesActivity.class);
+                i.putExtra("id", id);
+                startActivity(i);
+                break;
+            case R.id.main_menu_opt:
+                i = new Intent(RoleSearchActivity.this, MainMenuActivity.class);
+                i.putExtra("id", id);
+                startActivity(i);
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
